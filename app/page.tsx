@@ -67,9 +67,9 @@ export default function Home() {
   },[input])
   return (
     <div className=' h-screen flex justify-center items-center bg-slate-500/40'>
-      <div className=' w-[400px] flex flex-col p-5 gap-4 items-center rounded-md justify-center bg-gradient-to-t from-teal-600/60 to bg-emerald-600/40 shadow-lg '>
+      <div className=' w-auto md:w-[400px] flex flex-col p-4 md:p-5 gap-4 items-center rounded-md justify-center bg-gradient-to-t from-teal-600/60 to bg-emerald-600/40 shadow-lg '>
       <div className=' flex gap-5 items-center'>
-      <input onChange={(e)=>{setInput(e.target.value)}} placeholder='input' className=' rounded-sm h-[35px] w-[240px] px-2' />
+      <input onChange={(e)=>{setInput(e.target.value)}} placeholder='input' className=' rounded-sm h-[35px] min-w-[240px] px-2' />
       <button disabled={input===''?true:false} onClick={Official_Name} className={`${input==''?'bg-red-400':'bg-blue-500'} rounded-md min-w-[50px] h-10 px-2 `}  >Generate</button>
       </div>
       <div className=' w-full flex justify-between'>
